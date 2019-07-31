@@ -15,6 +15,13 @@ int main(void)
     }
     else
     {
-        printf("Great! Height will be %i\n", height);
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                printf("#");
+            }
+            printf("\n");
+        }
     }
 }
