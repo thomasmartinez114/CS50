@@ -11,11 +11,15 @@ int main(void)
     do
     {
         height = get_int("Height of pyramid is: ");
-    } while (height < 0 || height > 8);
+    } while (height < 1 || height > 8);
 
     for (int i = 1; i < height + 1; i++)
     {
-        printf(".");
+        for (int k = 0; k < height - i; k++)
+        {
+            printf(" ");
+        }
+
         for (int j = 0; j < i; j++)
         {
             printf("#");
