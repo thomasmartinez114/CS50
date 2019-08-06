@@ -23,11 +23,11 @@ int main(void)
 
     do
     {
-        dollars = get_float("Dollar amount: $");
+        dollars = get_float("Change Due: $");
     } while (dollars < 0.0);
 
     int totalCents = roundf(dollars * 100);
-    printf("Total amount cents = %i\n", totalCents);
+    //     printf("Total amount cents = %i\n", totalCents);
 
     // Get the sum of coin(s) used
     int sum = 0;
@@ -51,6 +51,13 @@ int main(void)
     {
         sum++;
         totalCents -= 5;
+    }
+
+    // Count of Pennies
+    while (1 <= totalCents)
+    {
+        sum++;
+        totalCents -= 1;
     }
 
     printf("I have %i coin(s)\n", sum);
