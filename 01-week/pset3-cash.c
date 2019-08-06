@@ -29,12 +29,21 @@ int main(void)
     int totalCents = roundf(dollars * 100);
     printf("Total amount cents = %i\n", totalCents);
 
+    // Get the sum of coin(s) used
     int sum = 0;
+
     // Count of Quarters
     while (25 <= totalCents)
     {
         sum++;
         totalCents -= 25;
+    }
+
+    // Count of Dimes
+    while (10 <= totalCents)
+    {
+        sum++;
+        totalCents -= 10;
     }
 
     printf("I have %i coin(s)\n", sum);
