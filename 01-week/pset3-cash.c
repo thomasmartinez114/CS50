@@ -46,5 +46,12 @@ int main(void)
         totalCents -= 10;
     }
 
+    // Count of Nickles
+    while (5 <= totalCents)
+    {
+        sum++;
+        totalCents -= 5;
+    }
+
     printf("I have %i coin(s)\n", sum);
 }
