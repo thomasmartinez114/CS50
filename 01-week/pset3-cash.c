@@ -29,6 +29,10 @@ int main(void)
     int totalCents = roundf(dollars * 100);
     //     printf("Total amount cents = %i\n", totalCents);
 
+    // The following will begin a summation of how many
+    // coins it will take to fulfill the returned change
+    // for the user
+
     // Get the sum of coin(s) used
     int sum = 0;
 
