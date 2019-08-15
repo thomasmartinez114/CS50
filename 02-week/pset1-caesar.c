@@ -10,9 +10,11 @@
 
 int main(int argc, string argv[])
 {
+    // Check for 2 args
     if (argc == 2)
     {
-        printf("Success\n%s\n", argv[1]);
+        int k = atoi(argv[1]);
+        printf("Success\n%i\n", k);
     }
     else
     {
