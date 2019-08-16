@@ -7,6 +7,8 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -19,5 +21,14 @@ int main(int argc, string argv[])
     else
     {
         printf("Usage: ./caesar key\n");
+    }
+
+    // Get encryption input from user
+    string encrypt = get_string("plaintext: ");
+
+    // String length
+    for (int i = 0; i < strlen(encrypt); i++)
+    {
+        printf("%c\n", encrypt[i]);
     }
 }
