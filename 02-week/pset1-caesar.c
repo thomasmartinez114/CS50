@@ -10,13 +10,18 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include <cs50.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 int main(int argc, string argv[])
 {
     // Check for 2 args
     if (argc == 2)
     {
         int k = atoi(argv[1]);
-        printf("Success\n%i\n", k);
+        // printf("Success\n%i\n", k);
     }
     else
     {
@@ -29,6 +34,6 @@ int main(int argc, string argv[])
     // String length
     for (int i = 0; i < strlen(encrypt); i++)
     {
-        printf("%c\n", encrypt[i]);
+        printf("%c", encrypt[i] + 1);
     }
 }
