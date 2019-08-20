@@ -28,12 +28,13 @@ int main(int argc, string argv[])
         // Pronpt user for plaintext to cipher
         string encrypt = get_string("Plaintext: ");
 
-        char cipherText[(strlen(encrypt) + 1)];
+        char cipherText[(strlen(encrypt) + key)];
+        // ex) tommie length + key
 
         for (int i = 0; i < strlen(encrypt); i++)
         {
-            cipherText[i] = encrypt[i];
+            cipherText[i] = encrypt[i] + key;
         }
-        printf("Ciphertext: %c\n");
+        printf("Ciphertext: %s\n", cipherText);
     }
 }
