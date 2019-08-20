@@ -10,30 +10,30 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include <cs50.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 int main(int argc, string argv[])
 {
-    // Check for 2 args
-    if (argc == 2)
+    // Validate argument
+    if (argc != 2)
     {
-        int k = atoi(argv[1]);
-        // printf("Success\n%i\n", k);
+        printf("Usage: ./caesar key \n");
+
+        // Exit
+        return 1;
     }
     else
     {
-        printf("Usage: ./caesar key\n");
-    }
+        // Converting key to integer
+        int key = atoi(argv[1]);
 
-    // Get encryption input from user
-    string encrypt = get_string("plaintext: ");
+        // Pronpt user for plaintext to cipher
+        string encrypt = get_string("Plaintext: ");
 
-    // String length
-    for (int i = 0; i < strlen(encrypt); i++)
-    {
-        printf("%c", encrypt[i] + 1);
+        char cipherText[(strlen(encrypt) + 1)];
+
+        for (int i = 0; i < strlen(encrypt); i++)
+        {
+            cipherText[i] = encrypt[i];
+        }
+        printf("Ciphertext: %c\n");
     }
 }
