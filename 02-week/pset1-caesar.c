@@ -12,29 +12,59 @@
 
 int main(int argc, string argv[])
 {
-    // Validate argument
     if (argc != 2)
     {
-        printf("Usage: ./caesar key \n");
+        printf("Usage: ./caesar key");
 
         // Exit
         return 1;
     }
-    else
+
+    // Pull key - ./caesar [key] from string to int
+    int key = atoi(argv[1]);
+
+    // Prompt user for Plaintext that will be encrypted
+    string plain = get_string("Plaintext: ");
+
+    char cipherText[(strlen(plain) + key)];
+    // ex) Tommie length + key
+
+    for (int i = 0; i < strlen(plain); i++)
     {
-        // Converting key to integer
-        int key = atoi(argv[1]);
-
-        // Pronpt user for plaintext to cipher
-        string encrypt = get_string("Plaintext: ");
-
-        char cipherText[(strlen(encrypt) + key)];
-        // ex) tommie length + key
-
-        for (int i = 0; i < strlen(encrypt); i++)
-        {
-            cipherText[i] = encrypt[i] + key;
-        }
-        printf("Ciphertext: %s\n", cipherText);
+        cipherText[i] = plain[i] + key;
     }
 }
+
+// #include <cs50.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
+
+// int main(int argc, string argv[])
+// {
+//     // Validate argument
+//     if (argc != 2)
+//     {
+//         printf("Usage: ./caesar key \n");
+
+//         // Exit
+//         return 1;
+//     }
+//     else
+//     {
+//         // Converting key to integer
+//         int key = atoi(argv[1]);
+
+//         // Pronpt user for plaintext to cipher
+//         string encrypt = get_string("Plaintext: ");
+
+//         char cipherText[(strlen(encrypt) + key)];
+//         // ex) tommie length + key
+
+//         for (int i = 0; i < strlen(encrypt); i++)
+//         {
+//             cipherText[i] = encrypt[i] + key;
+//         }
+//         printf("Ciphertext: %s\n", cipherText);
+//     }
+// }
