@@ -40,7 +40,7 @@ int main(int argc, string argv[])
         // ex) Tommie length + key
 
         // Print Ciphered text
-        printf("Ciphertext: ");
+        printf("ciphertext: ");
 
         // Run through each letter ASCII
         for (int i = 0; i < strlen(plain); i++)
