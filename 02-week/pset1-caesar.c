@@ -29,8 +29,22 @@ int main(int argc, string argv[])
     char cipherText[(strlen(plain) + key)];
     // ex) Tommie length + key
 
+    // Run through each letter ASCII
     for (int i = 0; i < strlen(plain); i++)
     {
+        // Check if lowercase --- "a" = 97 -- "z" = 122
+        if (plain[i] >= "a" && plain[i] <= "z")
+        {
+            // Print out between lowercase ASCII
+            printf("%c", (((plain[i] - "a") + key) % 26) + "a");
+        }
+        // Check if uppercase "A" = 65 -- "Z" = 90
+        else if (plain[i] >= "A" && plain[i] <= "Z")
+        {
+            // Print out between uppercase ASCII
+            printf("%c", (((plain[i] - "A") + key) % 26) + "A");
+        }
+
         cipherText[i] = plain[i] + key;
     }
 }
