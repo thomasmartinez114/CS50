@@ -23,10 +23,14 @@ int main(void)
     int height = 5;
 
       for (int i = 1; i <= height; i++)
-      {
+      { // column
+        for (int k = 0; k < height - i; k++)
+        {
+            printf(" ");
+        }
           for (int j = 1; j <= i; j++)
-          {
-          printf("# ");
+          { // row
+          printf("#");
           }
           printf("\n");
       }
