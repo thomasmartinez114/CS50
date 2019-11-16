@@ -10,18 +10,19 @@
 
 int main(void)
 {
-    // int height;
-
-//     While Loop
-//     do
-//     {
-//       height = get_int("Enter Height of Pyramid between 1 - 8: ");
-//       // printf("Height is %i \n", height);
-//     } while (height < 1 || height > 8);
 
     // remove this after testing statically
-    int height = 5;
+    // int height = 5;
 
+    int height;
+
+    do
+    {
+      height = get_int("Enter Height of Pyramid between 1 - 8: ");
+      // printf("Height is %i \n", height);
+    } while (height < 1 || height > 8);
+
+    // Loop to do hashtags and pyramid
       for (int i = 1; i <= height; i++)
       { // column
         for (int k = 0; k < height - i; k++)
