@@ -34,11 +34,9 @@ int main(void)
     int nickel = 5;
     int penny = 1;
 
-    while (cents >= 25)
+    if (cents % 25 == 0)
     {
-        coins++;
-        cents % 25;
+        cents -= 25;
     }
-
     printf("I have %i coin(s)\n", coins);
 }
