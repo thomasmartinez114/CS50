@@ -7,8 +7,6 @@
 
 int main(void)
 {
-
-    int coins = 0; // Placeholder for coins
     float dollars;
     do
     {
@@ -29,14 +27,18 @@ int main(void)
     //  (etc).
     //  Print number of coins used
 
+    int coins = 0; // Placeholder for coins
+
     int quarter = 25;
     int dime = 10;
     int nickel = 5;
     int penny = 1;
 
-    if (cents % 25 == 0)
+    if (cents >= quarter)
     {
-        cents -= 25;
+        cents = cents % quarter;
+        coins++;
+        printf("Cents remaining: %i \n", cents);
     }
 
     printf("I have %i coin(s)\n", coins);
