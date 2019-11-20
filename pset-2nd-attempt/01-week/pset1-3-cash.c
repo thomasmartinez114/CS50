@@ -39,44 +39,45 @@ int main(void)
     // Modulo
     coins = coins + cents / quarter; // coins = 0 + (100 / 25) -> 4
     cents = cents % quarter;         // cents = 100 % 25 -> 0
-    printf("Quarters used: %i", quarterSum);
+    printf("Quarters used: %i\n", quarterSum);
 
     coins = coins + cents / dime;
     cents = cents % dime;
-    printf("Dimes used: %i", dimeSum);
+    printf("Dimes used: %i\n", dimeSum);
 
     coins = coins + cents / nickel;
     cents = cents % nickel;
-    printf("Nickels used: %i", nickelSum);
+    printf("Nickels used: %i\n", nickelSum);
 
     coins = coins + cents / penny;
     cents = cents % penny;
-    printf("Pennies used: %i", pennySum);
+    printf("Pennies used: %i\n", pennySum);
 
     printf("I have %i coin(s)\n", coins);
 
     // Non Modulo method
+
     // while (cents >= quarter)
     // {
-    //     cents -= quarter;
+    //     cents = cents - quarter;
     //     coins++;
     //     printf("Quarter used\n");
     // }
     // while (cents >= dime)
     // {
-    //     cents -= dime;
+    //     cents = cents - dime;
     //     coins++;
     //     printf("Dime used\n");
     // }
     // while (cents >= nickel)
     // {
-    //     cents -= nickel;
+    //     cents = cents - nickel;
     //     coins++;
     //     printf("Nickel used\n");
     // }
     // while (cents >= penny)
     // {
-    //     cents -= penny;
+    //     cents = cents - penny;
     //     coins++;
     //     printf("Penny used\n");
     // }
