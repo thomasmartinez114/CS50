@@ -29,17 +29,33 @@ int main(void)
 
     int coins = 0; // Placeholder for coins
 
-    int quarter = 25;
-    int dime = 10;
-    int nickel = 5;
-    int penny = 1;
+    int quarter = 25, dime = 10, nickel = 5, penny = 1;
 
-    if (cents >= quarter)
-    {
-        cents = cents % quarter;
-        coins++;
-        printf("Cents remaining: %i \n", cents);
-    }
+    // Non Modulo method
+    // while (cents >= quarter)
+    // {
+    //     cents -= quarter;
+    //     coins++;
+    //     printf("Quarter used\n");
+    // }
+    // while (cents >= dime)
+    // {
+    //     cents -= dime;
+    //     coins++;
+    //     printf("Dime used\n");
+    // }
+    // while (cents >= nickel)
+    // {
+    //     cents -= nickel;
+    //     coins++;
+    //     printf("Nickel used\n");
+    // }
+    // while (cents >= penny)
+    // {
+    //     cents -= penny;
+    //     coins++;
+    //     printf("Penny used\n");
+    // }
 
     printf("I have %i coin(s)\n", coins);
 }
