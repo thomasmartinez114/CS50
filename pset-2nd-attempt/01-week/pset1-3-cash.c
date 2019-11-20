@@ -12,7 +12,8 @@ int main(void)
     {
         dollars = get_float("How much is your change: \n");
         // printf("Change is %f\n", dollars);
-    } while (dollars < 0);
+    }
+    while (dollars < 0);
 
     int cents = round(dollars * 100);
     printf("Your change in cents is: %i\n", cents);
