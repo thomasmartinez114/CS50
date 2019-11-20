@@ -31,27 +31,30 @@ int main(void)
 
     int quarter = 25, dime = 10, nickel = 5, penny = 1;
 
-    int quarterSum = cents / quarter;
-    int dimeSum = cents / dime;
-    int nickelSum = cents / nickel;
-    int pennySum = cents / penny;
+    // Ints to try to get each coin used separately
+    // int quarterSum = 0, dimeSum = 0, nickelSum = 0, pennySum = 0, coinSum = 0;
+    // int cents2 = round(dollars * 100);
 
     // Modulo
     coins = coins + cents / quarter; // coins = 0 + (100 / 25) -> 4
     cents = cents % quarter;         // cents = 100 % 25 -> 0
-    printf("Quarters used: %i\n", quarterSum);
+    // quarterSum = quarterSum + cents2 / quarter;
+    // printf("Quarters used: %i\n", quarterSum);
 
     coins = coins + cents / dime;
     cents = cents % dime;
-    printf("Dimes used: %i\n", dimeSum);
+    // dimeSum = coinSum + cents2 / dime;
+    // printf("Dimes used: %i\n", dimeSum);
 
     coins = coins + cents / nickel;
     cents = cents % nickel;
-    printf("Nickels used: %i\n", nickelSum);
+    // nickelSum = coinSum + cents2 / nickel;
+    // printf("Nickels used: %i\n", nickelSum);
 
     coins = coins + cents / penny;
     cents = cents % penny;
-    printf("Pennies used: %i\n", pennySum);
+    // pennySum = coinSum + cents2 / penny;
+    // printf("Pennies used: %i\n", pennySum);
 
     printf("I have %i coin(s)\n", coins);
 
