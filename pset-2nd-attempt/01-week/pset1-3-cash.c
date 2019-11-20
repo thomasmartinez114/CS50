@@ -31,6 +31,10 @@ int main(void)
 
     int quarter = 25, dime = 10, nickel = 5, penny = 1;
 
+    // Modulo
+    coins = coins + cents / 25;
+    cents = cents % 25;
+
     // Non Modulo method
     // while (cents >= quarter)
     // {
