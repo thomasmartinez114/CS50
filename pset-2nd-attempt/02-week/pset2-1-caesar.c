@@ -7,3 +7,19 @@
 //     2) if it is lowercase letter, rotate it, saving the case, then print out the rotated char
 //     3) if it is neither, print out the char as is
 // Print a newline
+
+#include <cs50.h>
+#include <stdio.h>
+
+int main(int argc, string argv[])
+{
+    if (argc == 2)
+    {
+        printf("Success\n");
+    }
+    else
+    {
+        printf("Usage: ./caesar key\n");
+        return 1;
+    }
+}
