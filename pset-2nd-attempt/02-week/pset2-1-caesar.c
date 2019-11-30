@@ -10,12 +10,15 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 
 int main(int argc, string argv[])
 {
     if (argc == 2)
     {
-        printf("Success\n");
+        //      printf("Success\n");
         //      printf("%s\n", argv[1]);
         int k = atoi(argv[1]);
         printf("%i\n", k);
@@ -26,4 +29,11 @@ int main(int argc, string argv[])
         return 1;
     }
     string plaintext = get_string("Plaintext: ");
+
+    string cipher = "";
+
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        printf("Hi");
+    }
 }
