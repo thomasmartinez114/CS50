@@ -13,14 +13,16 @@
 
 int main(int argc, string argv[])
 {
-    if (argc == 2)
+    if (argc != 2)
     {
-        printf("Success\n%s\n", argv[1]);
+        printf("Usage: ./caesar key\n");
+        // Exit
+        return 1;
     }
     else
     {
-        printf("Usage: ./caesar key\n");
-        return 1;
+        printf("Success\n%s\n", argv[1]);
+        return 0;
     }
 }
 
