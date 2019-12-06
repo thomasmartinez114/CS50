@@ -11,6 +11,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -26,34 +27,10 @@ int main(int argc, string argv[])
     // prompt user for plaintext
     string plaintext = get_string("Plaintext: ");
     printf("%s\n", plaintext);
+
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        string cipher = plaintext[i] + 1;
+    }
+    printf("%s", cipher);
 }
-
-// #include <cs50.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// #include <ctype.h>
-
-// int main(int argc, string argv[])
-// {
-//     if (argc == 2)
-//     {
-//         //      printf("Success\n");
-//         //      printf("%s\n", argv[1]);
-//         int k = atoi(argv[1]);
-//         printf("%i\n", k);
-//     }
-//     else
-//     {
-//         printf("Usage: ./caesar key\n");
-//         return 1;
-//     }
-//     string plaintext = get_string("Plaintext: ");
-
-//     string cipher = "";
-
-//     for (int i = 0; i < strlen(plaintext); i++)
-//     {
-//         printf("Hi");
-//     }
-// }
