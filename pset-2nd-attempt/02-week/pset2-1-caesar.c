@@ -21,6 +21,11 @@ int main(int argc, string argv[])
         return 1;
     }
     int key = atoi(argv[1]);
+    printf("The key is: %i\n", key);
+
+    // prompt user for plaintext
+    string plaintext = get_string("Plaintext: ");
+    printf("%s\n", plaintext);
 }
 
 // #include <cs50.h>
