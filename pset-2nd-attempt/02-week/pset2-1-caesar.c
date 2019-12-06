@@ -10,6 +10,7 @@
 
 #include <cs50.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, string argv[])
 {
@@ -19,11 +20,7 @@ int main(int argc, string argv[])
         // Exit
         return 1;
     }
-    else
-    {
-        printf("Success\n%s\n", argv[1]);
-        return 0;
-    }
+    int key = atoi(argv[1]);
 }
 
 // #include <cs50.h>
