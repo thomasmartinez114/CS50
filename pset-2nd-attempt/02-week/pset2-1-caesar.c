@@ -28,9 +28,11 @@ int main(int argc, string argv[])
     string plaintext = get_string("Plaintext: ");
     printf("%s\n", plaintext);
 
+    // Grab the plaintext and then cipher it by the key
+
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        string cipher = plaintext[i] + 1;
+        string cipher = plaintext[i] + key;
     }
     printf("%s", cipher);
 }
