@@ -22,17 +22,15 @@ int main(int argc, string argv[])
         return 1;
     }
     int key = atoi(argv[1]);
-    printf("The key is: %i\n", key);
+    printf("Success\n%i\n", key);
 
     // prompt user for plaintext
     string plaintext = get_string("Plaintext: ");
     printf("%s\n", plaintext);
 
-    // Grab the plaintext and then cipher it by the key
-
-    for (int i = 0; i < strlen(plaintext); i++)
-    {
-        string cipher = plaintext[i] + key;
-    }
-    printf("%s", cipher);
+    //     for (int i = 0; i < strlen(plaintext); i++)
+    //     {
+    //         string cipher = plaintext[i] + 1;
+    //     }
+    //     printf("%s", cipher);
 }
