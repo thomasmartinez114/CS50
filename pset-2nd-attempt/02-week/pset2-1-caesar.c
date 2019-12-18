@@ -30,6 +30,10 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < strlen(plaintext); i++)
     {
-        printf("%c\n", plaintext[i] + 1);
+        // Convert plaintext to ASCII
+        int c = (int)plaintext[i];
+        printf("%i ", c);
+
+        // Add the key to the cipher
     }
 }
