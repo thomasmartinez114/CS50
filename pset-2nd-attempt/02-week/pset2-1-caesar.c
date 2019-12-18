@@ -28,9 +28,8 @@ int main(int argc, string argv[])
     string plaintext = get_string("Plaintext: ");
     printf("%s\n", plaintext);
 
-    //     for (int i = 0; i < strlen(plaintext); i++)
-    //     {
-    //         string cipher = plaintext[i] + 1;
-    //     }
-    //     printf("%s", cipher);
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        printf("%c\n", plaintext[i] + 1);
+    }
 }
