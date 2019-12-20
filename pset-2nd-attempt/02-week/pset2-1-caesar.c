@@ -25,13 +25,13 @@ int main(int argc, string argv[])
     printf("Success\n%i\n", key);
 
     // prompt user for plaintext
-    string plaintext = get_string("Plaintext: ");
-    printf("%s\n", plaintext);
+    string plain = get_string("Plaintext: ");
+    printf("%s\n", plain);
 
-    for (int i = 0; i < strlen(plaintext); i++)
+    for (int i = 0; i < strlen(plain); i++)
     {
         // Convert plaintext to ASCII
-        int c = (int)plaintext[i];
+        int c = (int)plain[i];
         printf("%i ", c);
 
         // Add the key to the cipher
